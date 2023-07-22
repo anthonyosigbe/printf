@@ -44,7 +44,7 @@ int (*selectFormatter(char *format))(char *format, va_list);
 /* Main printf function */
 int _printf(const char *format, ...);
 
-/* Helper functions */
+/* Helper utility functions */
 
 unsigned int base_len(unsigned int, int);
 char *rev_string(char *);

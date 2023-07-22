@@ -37,6 +37,8 @@ int hex_check(int, char);
 int integer(int number);
 int countDigits(int number);
 int absoluteValue(int number);
+int print_binary(va_list list);
+
 
 /* Function for selecting the appropriate formatter function */
 int (*selectFormatter(char *format))(char *format, va_list);

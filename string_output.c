@@ -16,14 +16,14 @@ int printf_string(va_list val)
 	if (s == NULL)
 	{
 		s = "(null)";
-		len = _strlen(s);
+		len = strlen(s);
 		for (i = 0; i < len; i++)
 			_putchar(s[i]);
 		return (len);
 	}
 	else
 	{
-		len = _strlen(s);
+		len = strlen(s);
 		for (i = 0; i < len; i++)
 			_putchar(s[i]);
 		return (len);

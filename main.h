@@ -11,7 +11,7 @@
 typedef struct format
 {
     char *id;
-    int (*function)();
+    int (*function)(va_list val);
 } convert_match;
 
 int printPointer(va_list val);

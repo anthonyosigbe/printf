@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
+#include <string.h>
 
 typedef struct format
 {
@@ -17,8 +18,8 @@ int printPointer(va_list val);
 int printHex(unsigned long int num);
 int printHEX(unsigned int num);
 int printExclusiveString(va_list val);
-int printHEX(va_list val);
-int printHex(va_list val);
+int printCap_HEX(va_list val);
+int print_Hex(va_list val);
 int printOct(va_list val);
 int printUnsigned(va_list args);
 int printBin(va_list val);
@@ -32,7 +33,7 @@ int revString(char *s);
 int characterCount(const char *s);
 int printPercent(void);
 int printCharacter(va_list val);
-int printString(va_list val);
+int printf_string(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
 

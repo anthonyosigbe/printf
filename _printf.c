@@ -8,12 +8,12 @@
 int _printf(const char * const format, ...)
 {
 	convert_match m[] = {
-		{"%s", printString},
+		{"%s", printf_String},
 		{"%c", printCharacter}, {"%%", printPercent},
 		{"%i", printInt}, {"%d", printDec}, {"%r", printSrev},
 		{"%R", printRot13}, {"%b", printBin}, {"%u", printUnsigned},
 		{"%o", printOct},
-		{"%x", printHex}, {"%X", printHEX}, {"%S", printExclusiveString},
+		{"%x", print_Hex}, {"%X", printCap_HEX}, {"%S", printExclusiveString},
 		{"%p", printPointer}
 	};
 

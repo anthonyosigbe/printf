@@ -31,7 +31,7 @@ int stringLength(char *s);
 int copyString(char *dest, char *src);
 int revString(char *s);
 int characterCount(const char *s);
-int printPercent(void);
+int printf_37(void);
 int printCharacter(va_list val);
 int printf_string(va_list val);
 int _putchar(char c);

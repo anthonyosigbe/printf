@@ -4,7 +4,7 @@
  * printPercentChar - prints the percent character '%'.
  * Return: 1.
  */
-int printPercentChar(void)
+int printPercent(va_list val)
 {
 	_putchar('%');
 	return (1);

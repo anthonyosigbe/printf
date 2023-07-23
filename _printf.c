@@ -1,52 +1,46 @@
 #include "main.h"
-
 /**
- * _printf - This function is responsible for printing,
- * formatted data to the standard output (stdout).
- * @format: A string that contains the format to be printed.
- * Return: The number of characters successfully written to the output.
+ * _printf - a function responsible for identifying the appropriate,
+ * printing function based on the given format specifier.
+ * @format: identifier to look for.
+ * Return: the length of the string.
  */
-
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
-	int written = 0;
-	int (*structype)(char *, va_list);
-	va_list pa;
+	convert_match m[] = {
+		{"%s", printString},
+		{"%c", printCharacter}, {"%%", printPercent},
+		{"%i", printInt}, {"%d", printDec}, {"%r", printSrev},
+		{"%R", printRot13}, {"%b", printBin}, {"%u", printUnsigned},
+		{"%o", printOct},
+		{"%x", printHex}, {"%X", printHEX}, {"%S", printExclusiveString},
+		{"%p", printPointer}
+	};
 
-	if (format == NULL)
+	va_list args;
+	int i = 0, j, len = 0;
+
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-
-	va_start(pa, format);
-	_putchar(-1);
-	while (*format)
+Here:
+	while (format[i] != '\0')
 	{
-		if (*format == '%')
+		j = 13;
+		while (j >= 0)
 		{
-			structype = selectFormatter(format);
-			if (structype)
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				written += structype((char *)format, pa);
-				format++;
+				len += m[j].function(args);
+				i = i + 2;
+				goto Here;
 			}
-			else if (*(format + 1) != '\0')
-			{
-				written += _putchar('%');
-				written += _putchar(*(format + 1));
-				format += 2;
-			}
-			else
-			{
-				written += _putchar('%');
-				break;
-			}
+			j--;
 		}
-		else
-		{
-			written += _putchar(*format);
-			format++;
-		}
+		_putchar(format[i]);
+		len++;
+		i++;
 	}
-	_putchar(-2);
-	va_end(pa);
-	return (written);
+	va_end(args);
+	return (len);
 }

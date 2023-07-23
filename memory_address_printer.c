@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * printPointer - Prints a pointer's memory address as a hexadecimal number.
+ * printf_pointer - Prints a pointer's memory address as a hexadecimal number.
  * @val: Variable argument list containing the arguments.
  * Return: The number of characters printed.
  */
-int printPointer(va_list val)
+int printf_pointer(va_list val)
 {
 	void *p;
 	char *s = "(nil)";
@@ -26,7 +26,7 @@ int printPointer(va_list val)
 	a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	b = printf_hex(a);
+	b = printf_hex_aux(a);
 	return (b + 2);
 }
 

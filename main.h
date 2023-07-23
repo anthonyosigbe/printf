@@ -1,54 +1,39 @@
 #ifndef PRINT_F_HEADER
 #define PRINT_F_HEADER
 
-#include <stdarg.h>
-#include <stddef.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
+#include <limits.h>
+#include <unistd.h>
 
-/**
- * struct PrintFunctionEntry - Structure containing information,
- * for printing data.
- * @formatSpecifier: The format specifier representing the data type.
- * @printFunction: The corresponding print function for the specific data type.
- */
-
-typedef struct PrintFunctionEntry
+typedef struct format
 {
-	char *formatSpecifier;
-	int (*printFunction)(char *format, va_list);
-} PrintFunctionEntry;
+    char *id;
+    int (*function)();
+} convert_match;
 
-int _putchar(char ch);
-int _puts(char *string);
-
-/* Formatter functions for different data types */
-
-int printCharacter(char *format, va_list args);
-int printString(char *format, va_list args);
-int printInteger(char *format, va_list args);
-int printPercentage(char *format, va_list args);
-int printHexadecimal(char *format, va_list args);
-int printCapitalHexadecimal(char *format, va_list args);
-int printOctal(va_list args);
-int printUnsigned(char *format, va_list args);
-int countDigits(int number);
-int absoluteValue(int number);
-
-
-
-/* Function for selecting the appropriate formatter function */
-int (*selectFormatter(const char *format))(char *format, va_list);
-
-/* Main printf function */
+int printPointer(va_list val);
+int printHex(unsigned long int num);
+int printHEX(unsigned int num);
+int printExclusiveString(va_list val);
+int printHEX(va_list val);
+int printHex(va_list val);
+int printOct(va_list val);
+int printUnsigned(va_list args);
+int printBin(va_list val);
+int printSrev(va_list args);
+int printRot13(va_list args);
+int printInt(va_list args);
+int printDec(va_list args);
+int stringLength(char *s);
+int copyString(char *dest, char *src);
+int revString(char *s);
+int characterCount(const char *s);
+int printPercent(void);
+int printCharacter(va_list val);
+int printString(va_list val);
+int _putchar(char c);
 int _printf(const char *format, ...);
-
-/* Helper utility functions */
-
-unsigned int base_len(unsigned int, int);
-char *rev_string(char *);
-void write_base(char *str);
-char *_memcpy(char *dest, char *src, unsigned int n);
-int print_unsgined_number(unsigned int);
-
 
 #endif

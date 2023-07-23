@@ -70,6 +70,7 @@ int printUnsigned(char *format, va_list args)
 	int div;
 	int len;
 	unsigned int num;
+	(void)format;
 
 	div = 1;
 	len = 0;
@@ -102,4 +103,3 @@ int printInteger(char *format, va_list args)
 
 	return (digits);
 }
-

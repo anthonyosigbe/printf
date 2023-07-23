@@ -9,7 +9,7 @@
  *
  * Return: A function pointer to the appropriate formatter function.
  */
-int (*selectFormatter(char *format))(char *format, va_list)
+int (*selectFormatter(const char *format))(char *format, va_list)
 {
 	int i;
 
@@ -22,9 +22,6 @@ int (*selectFormatter(char *format))(char *format, va_list)
 		{"%x", printHexadecimal},
 		{"%X", printCapitalHexadecimal},
 		{"%o", printOctal},
-		{"R", rot13},
-		{"r", print_reversed},
-		{"b", print_binary},
 		{NULL, NULL}
 	};
 

@@ -29,19 +29,15 @@ int printInteger(char *format, va_list args);
 int printPercentage(char *format, va_list args);
 int printHexadecimal(char *format, va_list args);
 int printCapitalHexadecimal(char *format, va_list args);
-int printOctal(char *format, va_list args);
+int printOctal(va_list args);
 int printUnsigned(char *format, va_list args);
-int rot13(va_list);
-int print_reversed(va_list arg);
-int hex_check(int, char);
-int integer(int number);
 int countDigits(int number);
 int absoluteValue(int number);
-int print_binary(va_list list);
+
 
 
 /* Function for selecting the appropriate formatter function */
-int (*selectFormatter(char *format))(char *format, va_list);
+int (*selectFormatter(const char *format))(char *format, va_list);
 
 /* Main printf function */
 int _printf(const char *format, ...);

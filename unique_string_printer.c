@@ -29,7 +29,7 @@ int printExclusiveString(va_list val)
 				_putchar('0');
 				len++;
 			}
-			len += printHEX(cast);
+			len += printf_HEX(cast);
 		}
 		else
 		{

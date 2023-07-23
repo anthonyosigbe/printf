@@ -1,38 +1,47 @@
-#ifndef PRINT_F_HEADER
-#define PRINT_F_HEADER
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-#include <string.h>
+
+
+
+/**
+ * struct format - match the conversion specifiers for printf
+ * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
+ * @f: type pointer to function for the conversion specifier
+ *
+ */
 
 typedef struct format
 {
-    char *id;
-    int (*function)(va_list val);
+	char *id;
+	int (*f)();
 } convert_match;
 
-int printPointer(va_list val);
-int printHex(unsigned long int num);
-int printHEX(unsigned int num);
-int printExclusiveString(va_list val);
-int printCap_HEX(va_list val);
-int print_Hex(va_list val);
-int printOct(va_list val);
-int printUnsigned(va_list args);
-int printBin(va_list val);
-int printSrev(va_list args);
-int printRot13(va_list args);
-int printInt(va_list args);
-int printDec(va_list args);
-int stringLength(char *s);
-int copyString(char *dest, char *src);
-int revString(char *s);
-int characterCount(const char *s);
+int printf_pointer(va_list val);
+int printf_hex_aux(unsigned long int num);
+int printf_HEX_aux(unsigned int num);
+int printf_exclusive_string(va_list val);
+int printf_HEX(va_list val);
+int printf_hex(va_list val);
+int printf_oct(va_list val);
+int printf_unsigned(va_list args);
+int printf_bin(va_list val);
+int printf_srev(va_list args);
+int printf_rot13(va_list args);
+int printf_int(va_list args);
+int printf_dec(va_list args);
+int _strlen(char *s);
+int *_strcpy(char *dest, char *src);
+int _strlenc(const char *s);
+int rev_string(char *s);
+int _strlenc(const char *s);
 int printf_37(void);
-int printCharacter(va_list val);
+int printf_char(va_list val);
 int printf_string(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);

@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * printInt - Prints an integer.
+ * printf_int - Prints an integer.
  * @args: Variable argument list containing the arguments.
  * Return: The number of characters printed.
  */
-int printInt(va_list args)
+int printf_int(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
@@ -47,11 +47,11 @@ int printInt(va_list args)
 }
 
 /**
- * printDec - Prints a decimal number.
+ * printf_dec - Prints a decimal number.
  * @args: Variable argument list containing the arguments.
  * Return: The number of characters printed.
  */
-int printDec(va_list args)
+int printf_dec(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit;
@@ -92,4 +92,3 @@ int printDec(va_list args)
 	_putchar(last + '0');
 	return (i);
 }
-

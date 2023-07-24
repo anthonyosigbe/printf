@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * printExclusiveString - Prints a string with non-printable characters,
+ * printf_exclusive_string - Prints a string with non-printable characters,
  * represented as hexadecimal escape sequences.
  * @val: Variable argument list containing the arguments.
  * Return: The length of the printed string.
  */
-int printExclusiveString(va_list val)
+int printf_exclusive_string(va_list val)
 {
 	char *s;
 	int i, len = 0;

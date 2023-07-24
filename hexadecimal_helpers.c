@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * printHex - Prints an hexadecimal number.
+ * printf_hex_aux - Prints an hexadecimal number.
  * @num: The unsigned long integer to be printed as hexadecimal.
  * Return: The number of characters printed.
  */
-int printHex(unsigned long int num)
+int printf_hex_aux(unsigned long int num)
 {
 	long int i;
 	long int *array;

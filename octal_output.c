@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * printOct - Prints an octal number.
+ * printf_oct - Prints an octal number.
  * @val: Variable argument list containing the arguments.
  * Return: The number of characters printed.
  */
-int printOct(va_list val)
+int printf_oct(va_list val)
 {
 	int i;
 	int *array;

@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * stringLength - Calculates the length of a string.
+ * _strlen - Calculates the length of a string.
  * @s: Pointer to a character array.
  * Return: The length of the string.
  */
-int stringLength(char *s)
+int _strlen(char *s)
 {
 	int c;
 
@@ -15,12 +15,12 @@ int stringLength(char *s)
 }
 
 /**
- * characterCount - Counts the characters in a constant string.
+ * _strlenc - Counts the characters in a constant string.
  * @s: Constant pointer to a character array.
  * Return: The number of characters in the string.
  */
 
-int characterCount(const char *s)
+int _strlenc(const char *s)
 {
 	int c;
 

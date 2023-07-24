@@ -1,12 +1,10 @@
 #include "main.h"
-
 /**
- * printPercentChar - prints the percent character '%'.
+ * printf_37 - prints the char 37.
  * Return: 1.
  */
-int printPercentChar(void)
+int printf_37(void)
 {
-	_putchar('%');
+	_putchar(37);
 	return (1);
 }
-

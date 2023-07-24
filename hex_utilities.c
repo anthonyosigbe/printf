@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * printHEX - Prints a hexadecimal number.
+ * printf_HEX_aux - Prints a hexadecimal number.
  * @num: The number to be printed.
  *
  * Return: The number of characters printed.
  */
-int printHEX(unsigned int num)
+int printf_HEX_aux(unsigned int num)
 {
 	int i;
 	int *array;
@@ -35,4 +35,3 @@ int printHEX(unsigned int num)
 	free(array);
 	return (counter);
 }
-

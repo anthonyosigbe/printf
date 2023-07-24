@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * printHEX - prints a hexadecimal number.
+ * printf_HEX - prints a hexadecimal number.
  * @val: Variable argument list containing the arguments.
  * Return: The number of characters printed.
  */
-int printHEX(va_list val)
+int printf_HEX(va_list val)
 {
 	int i;
 	int *array;

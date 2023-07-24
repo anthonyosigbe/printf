@@ -3,6 +3,7 @@
 /**
  * printf_pointer - Prints a pointer's memory address as a hexadecimal number.
  * @val: Variable argument list containing the arguments.
+ * using for loop
  * Return: The number of characters printed.
  */
 int printf_pointer(va_list val)

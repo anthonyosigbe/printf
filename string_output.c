@@ -3,7 +3,7 @@
 /**
  * printf_string - Prints a string.
  * @val: Variable argument list containing the arguments.
- *
+ * using for, if and else stetement
  * Return: The length of the string.
  */
 

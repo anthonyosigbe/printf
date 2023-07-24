@@ -3,6 +3,7 @@
 /**
  * printf_rot13 - Prints a string in ROT13 cipher.
  * @args: Type struct va_arg where is allocated printf arguments.
+ * using for loop
  * Return: The number of characters printed.
  */
 int printf_rot13(va_list args)

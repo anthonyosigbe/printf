@@ -1,7 +1,7 @@
 #include "main.h"
-#include <string.h>
+
 /**
- * printString - Prints a string.
+ * printf_string - Prints a string.
  * @val: Variable argument list containing the arguments.
  *
  * Return: The length of the string.

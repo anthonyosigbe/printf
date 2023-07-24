@@ -3,7 +3,7 @@
 /**
  * printf_HEX_aux - Prints a hexadecimal number.
  * @num: The number to be printed.
- *
+ * using if, for and while loop
  * Return: The number of characters printed.
  */
 int printf_HEX_aux(unsigned int num)

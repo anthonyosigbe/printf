@@ -45,5 +45,6 @@ int printf_char(va_list val);
 int printf_string(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
+int handle_write_char(char c, char buffer[],int flags, int width, int precision, int size);
 
 #endif

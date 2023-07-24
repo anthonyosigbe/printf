@@ -3,7 +3,7 @@
 /**
  * printf_srev - Prints a string in reverse order.
  * @args: Type struct va_arg where is allocated printf arguments.
- *
+ * using if and while loop
  * Return: The number of characters printed.
  */
 int printf_srev(va_list args)

@@ -3,6 +3,7 @@
 /**
  * printf_hex_aux - Prints an hexadecimal number.
  * @num: The unsigned long integer to be printed as hexadecimal.
+ * using if and while loop
  * Return: The number of characters printed.
  */
 int printf_hex_aux(unsigned long int num)

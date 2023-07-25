@@ -1,5 +1,5 @@
 <h1>C - printf Group project</h1>
-<h2>Group Project:</h2>                                                                                                                                 
+<h2>Group Project:</h2>                                                                                                                                 <h4>contributors: Anthony Osigbe and David Kadiri</h4> 
 
 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm
 
